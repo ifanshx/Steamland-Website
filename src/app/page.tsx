@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
+import Header from "./Components/Header";
 import HomePages from "./pages/HomePages";
 
 export default function Home() {
