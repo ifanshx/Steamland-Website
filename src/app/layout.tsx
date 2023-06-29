@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Header from "./Components/Header";
-import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,16 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Suspense>
-        <body>
-          <link rel="icon" href="/assets/icon/Airdrop.png" sizes="any" />
-
-          <header>
-            <Header />
-          </header>
-          <main> {children} </main>
-        </body>
-      </Suspense>
+      <body>
+        <main> {children} </main>
+      </body>
     </html>
   );
 }
