@@ -1,27 +1,40 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const texts = [
+  "Hi, Gm Steamlanders",
+  "Welcome to the flying city",
+  "Pack your bags and head on a journey towards the flying city",
+  "Get ready for the next chapter of steamland!",
+];
 
 function Header() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentText, setCurrentText] = useState(texts[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newIndex = (currentIndex + 1) % texts.length;
+      setCurrentIndex(newIndex);
+      setCurrentText(texts[newIndex]);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
   return (
     <nav className="flex absolute top-0 px-8 pt-4 z-20 justify-between w-[1280px] xl:w-full items-center p-4">
-      <div className="flex items-center space-x-[15px]">
+      <div className="flex items-center space-x-[105px]">
         <Image
           src="/assets/icon/Profile.png"
           alt="Profile"
-          width={80}
+          width={90}
           height={80}
         />
 
-        <div className="relative">
-          <Image
-            src="/assets/icon/Text.png"
-            alt="Bubble-Chat"
-            width={250}
-            height={70}
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black font-bold text-xl">
-            Hi, GM
-          </div>
+        <div className="absolute flex items-center bg-white rounded-[15px] py-[12px] px-[15px] shadow-md ml-2 border-[4px] border-[#5d4418]">
+          <h1 className="text-sm font-Darker ">{currentText}</h1>
         </div>
       </div>
       <div className="flex space-x-[15px]">
@@ -75,8 +88,8 @@ function Header() {
         <Image
           src="/assets/icon/Connect.png"
           alt="Connect"
-          width={110}
-          height={70}
+          width={120}
+          height={90}
           className="hover:scale-110 transition-transform cursor-pointer"
         />
       </div>
