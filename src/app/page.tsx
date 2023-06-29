@@ -28,7 +28,7 @@ export default function Home() {
             className="absolute z-10 xl:w-full left-0 bottom-0 w-full h-full object-cover object-left-bottom"
           />
           <img
-            src="/assets/object/Sphinx-island.png"
+            src="/assets/object/Sphinx-Island.png"
             alt="Sphinx-island"
             className=" absolute z-20 drop-shadow-xl animate-sphinxisland h-[200px] top-[462px] left-[80rem] hover:drop-shadow-3xl cursor-pointer"
             onMouseEnter={handleMouseEnter}
