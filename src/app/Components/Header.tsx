@@ -24,7 +24,7 @@ function Header() {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <nav className="flex absolute top-0 px-8 pt-4 z-20 justify-between w-[1280px] xl:w-full items-center p-4">
+    <nav className="flex absolute top-0 px-8 pt-4 z-20 justify-between w-full items-center p-4">
       <div className="flex items-center space-x-[105px]">
         <Image
           src="/assets/icon/Profile.png"
