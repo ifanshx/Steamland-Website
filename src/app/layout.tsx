@@ -22,10 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const { screenWidth, screenHeight } = useWindowSize();
   return (
     <html lang="en">
-      <body style={{ width: screenWidth, height: screenHeight }}>
+      <body>
         <main> {children} </main>
       </body>
     </html>
