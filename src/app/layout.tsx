@@ -1,5 +1,8 @@
+"use client"
+
 import "./globals.css";
 import { Inter } from "next/font/google";
+import useWindowSize from "./hook/useWindowSize";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +21,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const { screenWidth, screenHeight } = useWindowSize();
   return (
     <html lang="en">
-      <body>
+      <body style={{ width: screenWidth, height: screenHeight }}>
         <main> {children} </main>
       </body>
     </html>

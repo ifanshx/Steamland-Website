@@ -26,12 +26,13 @@ export default function HomePages() {
     <main>
       <div className="relative min-h-screen justify-center items-center">
         <div className=" relative min-h-screen justify-center items-center ">
+  
+          <div className="relative" style={{ width: screenWidth, height: screenHeight }}>
           <img
             src="/assets/background/Malam.png"
             alt="Pagi"
             className="absolute z-10 left-0 bottom-0 w-full h-full object-cover object-left-bottom"
           />
-          <div className="relative" style={{ width: screenWidth, height: screenHeight }}>
           <img
             src="/assets/background/Citadel.png"
             alt="Citadel"
